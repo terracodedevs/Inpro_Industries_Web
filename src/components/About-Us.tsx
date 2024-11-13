@@ -11,7 +11,7 @@ const AboutUs = () => {
 
         <div className="w-full lg:w-1/2 flex flex-col sm:p-10 px-6">
           <div className="flex lg:w-1/3 sm:w-1/2 flex-row">
-          <button className=" bg-blue-900 text-white px-8 py-2 mb-5 rounded-lg" >About us</button>
+          <h1 className="font-bold text-4xl pu-4">About Us</h1>
           </div>
           <div className="flex flex-col">
             <p className="text-black lg:text-base text-sm mb-6 lg:text-start text-justify mt-8">
