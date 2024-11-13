@@ -31,7 +31,7 @@ const Slider = () => {
     "text-[rgba(0,48,71,1)] font-medium text-[18px] mt-5 p-2 flex justify-center items-center text-nowrap";
 
   return (
-    <div className="w-full bg-[url('/R-7.png')] p-10 bg-cover bg-no-repeat">
+    <div className="w-full bg-[url('/R-12.png')] p-10 bg-cover bg-no-repeat">
       <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[80%] pb-12 mx-auto">
         <div className="rounded-md flex justify-center items-center font-light">
         <h1 className="font-bold text-4xl pu-4">Our services</h1>
