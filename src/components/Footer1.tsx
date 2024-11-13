@@ -1,5 +1,5 @@
-import { AtSign, Link, MapPin, Phone } from 'lucide-react'
-import React from 'react'
+import { AtSign, MapPin, Phone } from 'lucide-react'
+
 import { NavLink } from 'react-router-dom'
 
 export default function Footer1() {

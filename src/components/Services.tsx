@@ -1,11 +1,14 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
+//@ts-ignore
 import "swiper/css";
+//@ts-ignore
 import "swiper/css/pagination";
+//@ts-ignore
 import "swiper/css/free-mode";
+//@ts-ignore
 import "swiper/css/autoplay";
-import { Autoplay, FreeMode, Pagination} from "swiper/modules";
-import { ArrowUpRight } from "lucide-react";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 
 
 

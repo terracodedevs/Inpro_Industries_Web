@@ -5,7 +5,7 @@ import Footer1 from './components/Footer1'
 
 
 import Carousel from './components/Hero'
-import ScrollFull from './components/Home'
+// import ScrollFull from './components/Home'
 import Slider from './components/Services'
 import Why from './components/Why'
 
