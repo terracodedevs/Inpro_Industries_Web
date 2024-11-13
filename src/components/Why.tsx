@@ -4,7 +4,7 @@
 
 const Why = () => {
   return (
-    <div className="mx-auto sm:px-4 py-10 lg:py- bg-cover bg-bottom xl:px-[6%] " style={{backgroundImage:'url("images/home/Background lines.png")'}} >
+    <div className="mx-auto sm:px-4 py-10 lg:py- bg-cover bg-bottom xl:px-[6%] h-screen " style={{backgroundImage:'url("images/home/Background lines.png")'}} >
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 bg-bottom " >
 
       {/* Image  */}

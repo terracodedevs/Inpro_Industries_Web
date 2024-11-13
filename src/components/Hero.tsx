@@ -85,7 +85,7 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="">
-      <Navbar />
+      
       <div className=" ">
         <div
           className="flex relative overflow-hidden  h-[106vh]  "
