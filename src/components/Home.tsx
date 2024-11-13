@@ -34,14 +34,15 @@ import Slider from './Services'
 
 import Footer1 from './Footer1'
 import Why from './Why'
+import ContactForm from './Contact'
 
 export default function Home() {
   return (
     <div>
-      <section id='#home'>
+      <section id='home'>
         <Carousel/>
       </section>
-      <section id='#About-Us'>
+      <section id='About-Us'>
         <AboutUs/>
       </section>
       <section id='#services'>
@@ -50,7 +51,10 @@ export default function Home() {
       <section id='#Why-Choose'>
         <Why/>
       </section>
-      <section id='#contact-us'>
+      <section id=''>
+        <ContactForm/>
+      </section>
+      <section id=''>
         <Footer1/>
       </section>
     </div>

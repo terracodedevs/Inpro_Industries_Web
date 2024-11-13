@@ -11,9 +11,12 @@ const AboutUs = () => {
 
         <div className="w-full lg:w-1/2 flex flex-col sm:p-10 px-6">
           <div className="flex lg:w-1/3 sm:w-1/2 flex-row">
-          <button className=" bg-blue-900 text-white px-8 py-2 mb-5 rounded-lg" >About us</button>
+          <h1 className="font-bold text-4xl pu-4">About Us</h1>
           </div>
-          <div className="flex flex-col">
+          <div className="text-black lg:text-base text-sm mb-6 lg:text-start text-justify mt-8">
+            <p>
+            Welcome to Inpro Industries (Pvt) Ltd., where passion meets precision in the world of printing services and product provision. Since our inception on January 10, 2010, as an individual company, and subsequently incorporating as a company with limited liability on February 9, 2023, we have been dedicated to setting the gold standard in the industry. As the owner, we are proud to lead a team of experts committed to delivering unparalleled quality in every aspect of our business.
+            </p>
             <p className="text-black lg:text-base text-sm mb-6 lg:text-start text-justify mt-8">
             At Inpro Offset Printing, we’re passionate about delivering high-quality prints with precision and care. With years of experience, we specialize in creating vibrant, detailed prints for all your needs—from business cards to large-scale posters. Our commitment to quality and personalized service ensures every project meets the highest standards, making your vision our priority.
             </p>

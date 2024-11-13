@@ -4,7 +4,7 @@
 
 const Why = () => {
   return (
-    <div className="mx-auto sm:px-4 py-10 lg:py- bg-cover bg-bottom xl:px-[6%] " style={{backgroundImage:'url("images/home/Background lines.png")'}} >
+    <div className="mx-auto sm:px-4 py-10 lg:py- bg-cover bg-bottom xl:px-[6%] h-screen " style={{backgroundImage:'url("images/home/Background lines.png")'}} >
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 bg-bottom " >
 
       {/* Image  */}
@@ -24,10 +24,10 @@ const Why = () => {
 
         <div className="w-full lg:w-1/2 flex flex-col sm:p-10 px-6">
           <div className="flex lg:w-1/3 sm:w-1/2 flex-row">
-          <button className=" bg-blue-900 text-white px-8 py-2 mb-5 rounded-lg text-nowrap" >Why Choose us</button>
+          <h1 className="font-bold text-5xl pl-0 p-4">Why....</h1>
           </div>
           <div className="flex flex-col">
-          <h1 className="text-3xl lg:text-3xl font-medium text-blue-900 mb-6">
+          <h1 className="text-3xl lg:text-2xl font-medium text-blue-900 mb-6">
             Welcome to Inpro – Your Trusted Offset Printing Partner
           </h1>
           <p className="text-black lg:text-base text-sm mb-6 lg:text-start text-justify">

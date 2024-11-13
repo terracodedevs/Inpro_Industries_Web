@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="flex justify-between items-center w-full backdrop-blur-sm bg-black/50 absolute left-1/2 translate-x-[-50%] px-[10%] p-6 h-16 md:h-20 lg:shadow-xl z-40">
+      <nav className="flex justify-between items-center w-full backdrop-blur-sm bg-black/50 absolute  left-1/2 translate-x-[-50%] px-[10%] p-6 h-16 md:h-20 lg:shadow-xl z-40">
         <div className="w-40 sm:w-44 md:w-56 lg:w-44">
           <a href="#home" className="">
             <img src='/logo.png' alt="Logo"/>
@@ -53,6 +53,9 @@ export default function Navbar() {
         <ul className={`hidden lg:flex items-center gap-9`}>
           <a href="#services" className="text-white hover:font-bold focus:font-bold">
             <li>Services</li>
+          </a>
+          <a href="#About-Us" className="text-white hover:font-bold focus:font-bold">
+            <li>About Us</li>
           </a>
           <a href="#Why-Choose" className="text-white hover:font-bold focus:font-bold">
             <li>Why</li>
@@ -81,7 +84,7 @@ export default function Navbar() {
           <a href="#" className="text-black" onClick={toggleMenu}>
             <li>Home</li>
           </a>
-          <a href="#About-Us" className="text-black" onClick={toggleMenu}>
+          <a href="#about-Us" className="text-black" onClick={toggleMenu}>
             <li>About Us</li>
           </a>
           <a href="#services" className="text-black" onClick={toggleMenu}>
