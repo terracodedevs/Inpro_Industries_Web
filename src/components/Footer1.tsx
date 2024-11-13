@@ -27,11 +27,11 @@ export default function Footer1() {
               <MapPin size={20} />
               <p className="text-sm">bla bla address</p>
             </a>
-            <a href="tel:1300762950" className="flex items-center gap-2 hover:text-blue-400 transition">
+            <a href="tel:+94779402202" className="flex items-center gap-2 hover:text-blue-400 transition">
               <Phone size={20} />
-              <p className="text-sm">+94779 402202 / +94717 302202</p>
+              <p className="text-sm">+94779402202 / +94717302202</p>
             </a>
-            <a href="mailto:info@purehopefm.com" className="flex items-center gap-2 hover:text-blue-400 transition">
+            <a href="mailto:inproindustries@yahoo.com" className="flex items-center gap-2 hover:text-blue-400 transition">
               <AtSign size={20} />
               <p className="text-sm">inproindustries@yahoo.com</p>
             </a>
