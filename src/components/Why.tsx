@@ -70,7 +70,9 @@ const Why = () => {
 
         <div className="w-full lg:w-1/2 flex flex-col sm:p-10 px-6">
           <div className="flex lg:w-1/3 sm:w-1/2 flex-row">
-          <h1 className="font-bold text-4xl pu-4">Why Choose Us</h1>
+          <h1 className="font-bold text-4xl py-4 bg-gradient-to-r from-blue-900 to-purple-700  bg-clip-text text-transparent text-nowrap">
+            Why Choose Us
+          </h1>
           </div>
           <div className="text-black lg:text-base text-sm mb-6 lg:text-start text-justify mt-8">
             <p>
