@@ -91,7 +91,7 @@ const Carousel: React.FC = () => {
         <Navbar/>
     <div className=" ">
       <div
-        className="flex relative overflow-hidden   h-screen  "
+        className="flex relative overflow-hidden  h-[106vh]  "
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -124,7 +124,7 @@ const Carousel: React.FC = () => {
                       {item.title1}
                     </span>
                     <span
-                      className="block text-2xl text-center md:text-5xl text-white font-semibold sm:font-bold mt-2"
+                      className="block text-2xl text-center md:text-7xl text-white font-semibold sm:font-bold mt-2"
                       style={{
                         textShadow: "6px 4px 6px rgba(0, 0, 0, 0.5)",
                       }}

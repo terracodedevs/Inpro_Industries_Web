@@ -16,25 +16,24 @@ export default function Footer1() {
                 <div className="grid sm:grid-cols-2  lg:grid-cols-5 md:gap-6 mt-8 lg:flex lg:justify-between">
                     <div className="flex flex-col gap-4 ">
                         <h3 className="font-bold">CONTACT</h3>
-                        <a href="https://maps.app.goo.gl/KCmzaAgV1R8nX51XA">
+                        <a href="">
                             <div className="flex flex-row gap-2">
                             <MapPin size={20} className="" />
                             <p className=" text-sm w-56">
-                                Suite 346 , Level 2/66 Victor Cres, Narre Warren VIC 3805,
-                                Australia
+                                bla bla address
                             </p>
                             </div>
                         </a>
                         <a href="tel:1300762950">
                             <div className="flex flex-row gap-2">
                             <Phone size={20} className="" />
-                            <p className="text-sm">1300 762 950</p>
+                            <p className="text-sm">bla bla</p>
                             </div>
                         </a>
                         <a href="mailto:info@purehopefm.com.ou">
                             <div className="flex flex-row gap-2">
                             <AtSign size={20} className="" />
-                            <p className="text-sm">info@purehopefm.com.au</p>
+                            <p className="text-sm">bala bla</p>
                             </div>
                         </a> 
                     </div>
@@ -42,20 +41,15 @@ export default function Footer1() {
                     <h3 className="font-bold ">OUR LINKS</h3>
                     <ul className="space-y-1 ">
                         <li className="text-sm">
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="#">Home</NavLink>
                         </li>
                         <li className="text-sm">
-                        <NavLink to="/about-us">About Us</NavLink>
+                        <NavLink to="#About-Us">About Us</NavLink>
                         </li>
                         <li className="text-sm">
-                        <NavLink to="/ourservices">Services</NavLink>
+                        <NavLink to="#services">Services</NavLink>
                         </li>
-                        <li className="text-sm hidden">
-                        <NavLink to="/recent-updates">Recent Updates</NavLink>
-                        </li>
-                        <li className="text-sm">
-                        <NavLink to="/requestquote">Request A Quote</NavLink>
-                        </li>
+                        
                     </ul>
                     </div>
                 </div>
