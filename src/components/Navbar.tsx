@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
         {/* Normal navbar */}
         <ul className={`hidden lg:flex items-center gap-9`}>
-          <a href="#services" className="text-white hover:font-bold focus:font-bold">
+          {/* <a href="#services" className="text-white hover:font-bold focus:font-bold">
             <li>Services</li>
           </a>
           <a href="#About-Us" className="text-white hover:font-bold focus:font-bold">
@@ -59,7 +59,24 @@ export default function Navbar() {
           </a>
           <a href="#Why-Choose" className="text-white hover:font-bold focus:font-bold">
             <li>Why</li>
+          </a> */}
+          <a href="#services" className="relative text-white hover:text-blue-300 transition-all duration-500">
+            <li className="hover:scale-110 hover:font-semibold transition-transform duration-500 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-2px] after:h-[2px] after:bg-gradient-to-r from-blue-500 to-purple-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500">
+              Services
+            </li>
           </a>
+          <a href="#About-Us" className="relative text-white hover:text-blue-300 transition-all duration-500">
+            <li className="hover:scale-110 hover:font-semibold transition-transform duration-500 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-2px] after:h-[2px] after:bg-gradient-to-r from-blue-500 to-purple-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500">
+              About Us
+            </li>
+          </a>
+          <a href="#Why-Choose" className="relative text-white hover:text-blue-300 transition-all duration-500">
+            <li className="hover:scale-110 hover:font-semibold transition-transform duration-500 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-2px] after:h-[2px] after:bg-gradient-to-r from-blue-500 to-purple-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500">
+              Why
+            </li>
+          </a>
+
+
           
           <a href='#contact-us'>
             <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
