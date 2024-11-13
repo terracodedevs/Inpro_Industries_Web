@@ -27,13 +27,14 @@ export default function Footer1() {
                         <a href="tel:1300762950">
                             <div className="flex flex-row gap-2">
                             <Phone size={20} className="" />
-                            <p className="text-sm">bla bla</p>
+                            <p className="text-sm"><span>+94779 402202 / +94717 302202
+                                </span></p>
                             </div>
                         </a>
                         <a href="mailto:info@purehopefm.com.ou">
                             <div className="flex flex-row gap-2">
                             <AtSign size={20} className="" />
-                            <p className="text-sm">bala bla</p>
+                            <p className="text-sm"> inproindustries@yahoo.com</p>
                             </div>
                         </a> 
                     </div>
