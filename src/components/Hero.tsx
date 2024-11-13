@@ -21,7 +21,7 @@ const carouselData: CarouselItem[] = [
     title2: "Inpro: Your Partner in Precision Offset Printing",
     description: "",
     buttonText: "Contact Us",
-    buttonLink: "/contactus",
+    buttonLink: "#contact-us",
   },
   {
     slideId: 2,
@@ -30,7 +30,7 @@ const carouselData: CarouselItem[] = [
     title2: "Bringing Ideas to Life with Quality Offset Printing",
     description: "",
     buttonText: "Contact Us",
-    buttonLink: "/contactus",
+    buttonLink: "#contact-us",
   },
   {
     slideId: 3,
@@ -39,7 +39,7 @@ const carouselData: CarouselItem[] = [
     title2: "Experience Exceptional Print Quality with Inpro",
     description: "",
     buttonText: "Contact Us",
-    buttonLink: "/contactus",
+    buttonLink: "#contact-us",
   },
 ];
 
@@ -136,9 +136,11 @@ const Carousel: React.FC = () => {
                       {item.description}
                     </p>
                     {index === currentSlide && (
+                      <a href="#contact-us">
                       <span className="bg-blue-900 text-white font-bold py-1 px-3 sm:py-2 sm:px-6 text-xs rounded-md sm:text-base sm:rounded-lg transition duration-300 cursor-pointer inline-block relative z-10 hover:bg-[#003047]">
                         {item.buttonText}
                       </span>
+                      </a>
                     )}
                   </div>
                 </div>

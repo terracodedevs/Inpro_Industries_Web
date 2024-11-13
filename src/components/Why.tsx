@@ -24,7 +24,7 @@ const Why = () => {
 
         <div className="w-full lg:w-1/2 flex flex-col sm:p-10 px-6">
           <div className="flex lg:w-1/3 sm:w-1/2 flex-row">
-          <h1 className="font-bold text-5xl pl-0 p-4">Why....</h1>
+          <h1 className="font-bold text-5xl pl-0 p-4  ">Why....</h1>
           </div>
           <div className="flex flex-col">
           <h1 className="text-3xl lg:text-2xl font-medium text-blue-900 mb-6">
