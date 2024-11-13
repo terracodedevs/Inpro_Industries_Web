@@ -113,7 +113,7 @@ const Carousel: React.FC = () => {
                   <div className="mt-10 sm:mt-0 flex flex-col justify-center items-center">
                     <h1 className="mb-0 sm:mb-4">
                       <span
-                        className="block text-1xl md:text-4xl text-white font-light"
+                        className="block text-2xl md:text-4xl text-white font-light"
                         style={{
                           textShadow: "6px 4px 6px rgba(0, 0, 0, 0.5)",
                         }}
@@ -121,7 +121,7 @@ const Carousel: React.FC = () => {
                         {item.title1}
                       </span>
                       <span
-                        className="block text-2xl text-center md:text-7xl text-white font-semibold sm:font-bold mt-2"
+                        className="block text-3xl text-center sm:text-4xl lg:text-7xl text-white font-semibold sm:font-bold mt-2"
                         style={{
                           textShadow: "6px 4px 6px rgba(0, 0, 0, 0.5)",
                         }}

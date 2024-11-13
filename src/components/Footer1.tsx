@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 export default function Footer1() {
   return (
-    <footer className="bg-black text-white p- md:p-16">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className='relative bottom-0'>
+    <div className="bg-black text-white p- md:p-16 ">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Logo and Map Section */}
         <div className="space-y-4">
           <img src="/logo.png" alt="Logo" className="w-[179px] mt-4 sm:mt-0 ml-3 sm:ml-0 md:w-[181px] mb-4 "   />
@@ -62,6 +63,7 @@ export default function Footer1() {
         </a>
         <p>© {new Date().getFullYear()} Inpro. All rights reserved.</p>
       </div>
-    </footer>
+    </div>
+    </div>
   );
 }
