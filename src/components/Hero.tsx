@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Client from "./Client";
 
 interface CarouselItem {
