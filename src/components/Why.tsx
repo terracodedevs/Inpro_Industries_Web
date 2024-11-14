@@ -2,6 +2,8 @@
 
 
 
+
+
 // const Why = () => {
 //   return (
 //     <div className="mx-auto sm:px-4 py-10 lg:py- bg-cover bg-bottom xl:px-[6%] h-screen "  >
@@ -59,7 +61,7 @@ const Why = () => {
         <div className="w-full lg:w-1/2 relative sm:aspect-[8/7] aspect-[8/8] ">
           <div className="absolute sm:inset-10 inset-6 ">
             <div className="relative w-full h-full">
-              <div className="relative w-full h-full bg-[url('/4.jpg')] bg-cover  ">
+              <div className="relative w-full h-full bg-[url('/4.jpg')] bg-cover bg-blend-overlay border-4 border-white">
                 <div className="absolute inset-0 bg-[url('/splash.jpg')] bg-center bg-cover  mix-blend-screen"></div>
               </div>
             </div>
@@ -89,7 +91,7 @@ const Why = () => {
       
         
         </div>
-        
+        {/* <Number/> */}
 
     </div>
   );

@@ -1,6 +1,7 @@
 // ContactForm.tsx
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import ContactUs from './Number';
 
 const YOUR_SERVICE_ID = 'service_4pvyby5';
 const YOUR_TEMPLATE_ID = 'template_gttubb3';
@@ -39,9 +40,13 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className='flex justify-center items-center min-h-screen bg-gray-100'>
-    <div className="w-full mx-[20%] p-6 bg-white shadow-lg rounded-lg ">
-      <h2 className="text-3xl text-center font-bold text-gray-800 mb-4">Contact Us</h2>
+   <div className='grid grid-cols-1 sm:grid-cols-2'>
+    <div>
+      <ContactUs/>
+    </div>
+    <div className='flex justify-center items-center min-h-screen bg-gray-100 mt-7'>
+    <div className="w-full mx-[10%] p-6 bg-white shadow-lg rounded-lg ">
+      <h2 className="text-3xl text-center font-bold bg-gradient-to-r from-blue-900 to-purple-700  bg-clip-text text-transparent mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -95,6 +100,8 @@ const ContactForm: React.FC = () => {
       </form>
     </div>
     </div>
+    
+    </div> 
   );
 };
 
