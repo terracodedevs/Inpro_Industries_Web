@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 // import Navbar from "./Navbar";
 import Client from "./Client";
+import {  MessageSquareTextIcon, SendIcon } from "lucide-react";
 
 interface CarouselItem {
   slideId: number;
@@ -136,11 +137,26 @@ const Carousel: React.FC = () => {
                       {item.description}
                     </p>
                     {index === currentSlide && (
-                      <a href="#contact-us">
-                      <span className="bg-blue-900 text-white font-bold py-1 px-3 sm:py-2 sm:px-6 text-xs rounded-md sm:text-base sm:rounded-lg transition duration-300 cursor-pointer inline-block relative z-10 hover:bg-[#003047]">
-                        {item.buttonText}
-                      </span>
-                      </a>
+                      <>
+                      <div className="flex flex-row gap-4">
+                      <a href='#contact-us'>
+                      <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
+                            <button className='flex-grow text-left font-semibold focus:outline-none'>
+                              <p className='font-normal text-[13px] font-inter'> Contact Us</p>
+                            </button>
+                            <SendIcon className='ml-2' size={20}/>
+                      </div>
+                    </a>
+                    <a href='#About-Us'>
+                    <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
+                          <button className='flex-grow text-left font-semibold focus:outline-none'>
+                            <p className='font-normal text-[13px] font-inter'> About Us</p>
+                          </button>
+                          <MessageSquareTextIcon className='ml-2' size={20}/>
+                    </div>
+                  </a>
+                  </div>
+                  </>
                     )}
                   </div>
                 </div>

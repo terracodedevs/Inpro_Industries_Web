@@ -81,7 +81,7 @@ export default function Navbar() {
           <a href='#contact-us'>
             <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
                   <button className='flex-grow text-left font-semibold focus:outline-none'>
-                    <p className='font-normal text-[12px] font-inter'> Contact Us</p>
+                    <p className='font-normal text-[13px] font-inter'> Contact Us</p>
                   </button>
                   <SendIcon className='ml-2' size={20}/>
             </div>
