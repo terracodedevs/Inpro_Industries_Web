@@ -13,18 +13,46 @@ const Slider = () => {
   // JSON data representing your services
   const servicesData = [
     {
-      imgSrc: "/1.jpg",
-      title: "Printing",
-      des: "bla bla",
+      imgSrc: "/calend.png",
+      title: "2025 Calendars",
     },
     {
-      imgSrc: "/2.jpg",
-      title: "Printing",
+      imgSrc: "/tablec.jpg",
+      title: "Table Calendar",
     },
     {
-      imgSrc: "/3.jpg",
-      title: "Printing",
+      imgSrc: "/diaries.jpg",
+      title: "Customise Notebook",
     },
+    {
+      imgSrc: "/cyp.jpg",
+      title: "Customise Year Planer",
+    },
+    {
+      imgSrc: "/spb.webp",
+      title: "Spiral Binding",
+    },
+    {
+      imgSrc: "/hcm.webp",
+      title: "Hard Cover Making",
+    },
+    {
+      imgSrc: "/PVC.jpg",
+      title: "PVC Stationery",
+    },
+    {
+      imgSrc: "/lamin.jpg",
+      title: "Laminating",
+    },
+    {
+      imgSrc: "/images.jpg",
+      title: "Foiling",
+    },
+    {
+      imgSrc: "/cake.webp",
+      title: "Cake Boards",
+    },
+    
   ];
 
   const title =
@@ -32,7 +60,7 @@ const Slider = () => {
 
   return (
     <div className="w-full bg-[url('/R-12.png')] p-10 bg-cover bg-no-repeat">
-      <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[80%] pb-12 mx-auto ">
+      <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[85%] pb-12 mx-auto ">
         <div className="rounded-md flex justify-center items-center font-light ">
         <h1 className="font-bold text-4xl p-4 bg-gradient-to-r from-blue-900 to-purple-700  bg-clip-text text-transparent">Our services</h1>
         </div>
@@ -47,8 +75,8 @@ const Slider = () => {
               slidesPerView: 2,
             },
             1100: {
-              slidesPerView: 3,
-              spaceBetween: 30,
+              slidesPerView: 4,
+              spaceBetween:15
             },
           }}
           freeMode={true}
@@ -62,7 +90,7 @@ const Slider = () => {
           {servicesData.map((service, index) => (
             <SwiperSlide key={index}>
               <div className="flex justify-center items-center lg:h-[500px] h-[450px] ">
-                <div className="w-[330px] h-[340px] bg-white rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-2xl">
+                <div className="w-[280px] h-[340px] bg-white rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-2xl">
                   <div className="h-[250.03px] rounded-3xl overflow-hidden">
                     <img
                       src={service.imgSrc}
@@ -72,7 +100,6 @@ const Slider = () => {
                   </div>
                   <div className="flex justify-center gap- lg:gap- items-center flex-col">
                     <h1 className={title}>{service.title}</h1>
-                    <p className="">{service.des}</p>
                   </div>
                 </div>
               </div>
