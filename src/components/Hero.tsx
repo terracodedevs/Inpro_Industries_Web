@@ -140,17 +140,17 @@ const Carousel: React.FC = () => {
                       <>
                       <div className="flex flex-row gap-4">
                       <a href='#contact-us'>
-                      <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
+                      <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-fit hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
                             <button className='flex-grow text-left font-semibold focus:outline-none'>
-                              <p className='font-normal text-[13px] font-inter'> Contact Us</p>
+                              <p className='font-normal text-[13px] font-inter text-nowrap'> Contact Us</p>
                             </button>
                             <SendIcon className='ml-2' size={20}/>
                       </div>
                     </a>
                     <a href='#About-Us'>
-                    <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-[156px] hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
+                    <div className='flex flex-row bg-blue-900 text-white px-8 py-2 rounded-full w-fit hover:scale-110 active:scale-95 transition-all duration-300 justify-center items-center shadow-md'>
                           <button className='flex-grow text-left font-semibold focus:outline-none'>
-                            <p className='font-normal text-[13px] font-inter'> About Us</p>
+                            <p className='font-normal text-[13px] font-inter text-nowrap'> About Us</p>
                           </button>
                           <MessageSquareTextIcon className='ml-2' size={20}/>
                     </div>
