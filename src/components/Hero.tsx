@@ -109,7 +109,7 @@ const Carousel: React.FC = () => {
                 />
               </div>
 
-              <div className="absolute inset-0 bg-black bg-opacity-35 flex items-center justify-center ">
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center ">
                 <div className="mx-[12%]">
                   <div className="mt-10 sm:mt-0 flex flex-col justify-center items-center">
                     <h1 className="mb-0 sm:mb-4">
@@ -136,7 +136,7 @@ const Carousel: React.FC = () => {
                     >
                       {item.description}
                     </p>
-                    {index === currentSlide && (
+                    
                       <>
                       <div className="flex flex-row gap-4">
                       <a href='#contact-us'>
@@ -157,7 +157,7 @@ const Carousel: React.FC = () => {
                   </a>
                   </div>
                   </>
-                    )}
+                  
                   </div>
                 </div>
               </div>
