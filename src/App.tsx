@@ -1,6 +1,7 @@
 
 import './App.css'
 import AboutUs from './components/About-Us'
+import ContactForm from './components/Contact'
 import Footer1 from './components/Footer1'
 
 
@@ -30,6 +31,9 @@ function App() {
         <Why/>
       </section>
       <section id='contact-us'>
+        <ContactForm/>
+      </section>
+      <section id=''>
         <Footer1/>
       </section>
         {/* <ScrollFull/> */}

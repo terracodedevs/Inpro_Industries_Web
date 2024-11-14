@@ -60,7 +60,7 @@ const Slider = () => {
 
   return (
     <div className="w-full bg-[url('/R-12.png')] p-10 bg-cover bg-no-repeat">
-      <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[85%] pb-12 mx-auto ">
+      <div className="max-w-[100%] md:max-w-[100%] lg:max-w-[100%] pb-12 mx-auto ">
         <div className="rounded-md flex justify-center items-center font-light ">
         <h1 className="font-bold text-4xl p-4 bg-gradient-to-r from-blue-900 to-purple-700  bg-clip-text text-transparent">Our services</h1>
         </div>
