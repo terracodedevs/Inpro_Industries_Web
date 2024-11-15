@@ -1,39 +1,33 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import emailjs from 'emailjs-com';
 
+// Replace these constants with your EmailJS credentials
 const YOUR_SERVICE_ID = 'service_qvu70e2';
 const YOUR_TEMPLATE_ID = 'template_4ysoxgw';
-const YOUR_USER_ID = 'vv70io4ATQTdvlk6ogit';
+const YOUR_USER_ID = 'vv70io4ATQTdvlk6o';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    telNumber: '',
-  });
+  const formRef = useRef<HTMLFormElement>(null); // Ref for the form
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, YOUR_USER_ID);
+      // Sending form data to EmailJS
+      await emailjs.sendForm(
+        YOUR_SERVICE_ID,
+        YOUR_TEMPLATE_ID,
+        formRef.current!,
+        YOUR_USER_ID
+      );
       alert('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '', telNumber: '' });
+      formRef.current?.reset(); // Reset the form after a successful submission
     } catch (error) {
       console.error('Failed to send email:', error);
-      alert('Failed to send message, please try again later.');
+      alert('Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -42,66 +36,72 @@ const Contact: React.FC = () => {
   return (
     <section className="py-20 bg-slate-50" id="contact">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-900">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-slate-900">
+          Get in Touch
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-slate-700 mb-1"
+                >
                   Full Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-slate-700 mb-1"
+                >
                   Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
+                <label
+                  htmlFor="telNumber"
+                  className="block text-sm font-medium text-slate-700 mb-1"
+                >
                   Phone Number
                 </label>
                 <input
                   type="tel"
-                  id="phone"
+                  id="telNumber"
                   name="telNumber"
-                  value={formData.telNumber}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="+1 (234) 567-8900"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-slate-700 mb-1"
+                >
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   rows={4}
                   required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -122,7 +122,9 @@ const Contact: React.FC = () => {
           <div className="lg:pl-12">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  Contact Information
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <Phone className="w-6 h-6 text-blue-600 flex-shrink-0" />
@@ -137,7 +139,9 @@ const Contact: React.FC = () => {
                     <Mail className="w-6 h-6 text-blue-600 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-slate-900">Email</p>
-                      <p className="text-slate-600">inproindustries@yahoo.com</p>
+                      <p className="text-slate-600">
+                        inproindustries@yahoo.com
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
