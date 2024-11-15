@@ -16,12 +16,12 @@ const AboutUs = () => {
               highest standards of excellence.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-slate-50 p-4 rounded-lg">
+              <div className="bg-gradient-to-r from-gray-70 to-white shadow-lg p-4 rounded-lg">
                 <Users className="w-8 h-8 text-blue-600 mb-2" />
                 <h3 className="font-bold text-slate-900">1000+</h3>
                 <p className="text-slate-600">Happy Clients</p>
               </div>
-              <div className="bg-slate-50 p-4 rounded-lg">
+              <div className="bg-gradient-to-r from-gray-70 to-white shadow-lg p-4 rounded-lg">
                 <Clock className="w-8 h-8 text-blue-600 mb-2" />
                 <h3 className="font-bold text-slate-900">13+ Years</h3>
                 <p className="text-slate-600">Experience</p>
