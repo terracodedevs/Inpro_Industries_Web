@@ -7,7 +7,8 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">About Us</h2>
+          <h2 className="text-4xl font-bold t mb-12 bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">About Us
+</h2>
             <p className="text-lg text-slate-600 mb-8">
               Since 2010, Inpro Industries has been at the forefront of the printing industry, 
               delivering exceptional quality and innovative solutions to businesses across the globe. 
@@ -35,7 +36,7 @@ const AboutUs = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-xl">
+            <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-blue-800 to-blue-500  text-white p-6 rounded-lg shadow-xl">
               <Shield className="w-8 h-8 mb-2" />
               <h3 className="font-bold text-xl mb-1">Quality Guaranteed</h3>
               {/* <p>ISO 9001:2015 Certified</p> */}
