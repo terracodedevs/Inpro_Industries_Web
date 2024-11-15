@@ -1,7 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
-const Contact = () => {
+const YOUR_SERVICE_ID = 'service_qvu70e2';
+const YOUR_TEMPLATE_ID = 'template_4ysoxgw';
+const YOUR_USER_ID = 'vv70io4ATQTdvlk6ogit';
+
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    telNumber: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, formData, YOUR_USER_ID);
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '', telNumber: '' });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to send message, please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 bg-slate-50" id="contact">
       <div className="container mx-auto px-4">
@@ -10,7 +47,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
                   Full Name
@@ -18,6 +55,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="John Doe"
                 />
@@ -29,6 +70,10 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="john@example.com"
                 />
@@ -40,6 +85,10 @@ const Contact = () => {
                 <input
                   type="tel"
                   id="phone"
+                  name="telNumber"
+                  value={formData.telNumber}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="+1 (234) 567-8900"
                 />
@@ -50,7 +99,11 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
+                  required
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="How can we help you?"
                 />
@@ -58,8 +111,9 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
@@ -74,7 +128,9 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-blue-600 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-slate-900">Phone</p>
-                      <p className="text-slate-600">+94779 402202 / +94717 302202 / +9476 7703531</p>
+                      <p className="text-slate-600">
+                        +94779 402202 / +94717 302202 / +9476 7703531
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -88,7 +144,11 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-slate-900">Address</p>
-                      <p className="text-slate-600">19<sup>th</sup> Lane, Mewella Road,<br />Pethiyagoda, Kelaniya</p>
+                      <p className="text-slate-600">
+                        19<sup>th</sup> Lane, Mewella Road,
+                        <br />
+                        Pethiyagoda, Kelaniya
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -96,11 +156,11 @@ const Contact = () => {
 
               {/* Map */}
               <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg">
-              <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2775217974404!2d79.92688337560344!3d6.976546793024247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae257fb1133a9ab%3A0x43262c18ffd560c2!2sTharanga%20Printers!5e0!3m2!1sen!2slk!4v1731675559789!5m2!1sen!2slk"
-              className="w-full h-64 border-0 rounded-lg"
-              loading="lazy"
-            ></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.5150459887095!2d79.89732507499679!3d6.948407993051815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTYnNTQuMyJOIDc5wrA1Myc1OS42IkU!5e0!3m2!1sen!2slk!4v1731678557932!5m2!1sen!2slk"
+                  className="w-full h-64 border-0 rounded-lg"
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
           </div>
