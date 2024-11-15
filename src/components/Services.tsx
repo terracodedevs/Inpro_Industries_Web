@@ -71,7 +71,9 @@ const Services = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-2 text-center">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-center bg-gradient-to-r from-blue-500 to-blue-900 bg-clip-text text-transparent">
+                {service.title}
+              </h3>
               </div>
             </div>
           ))}
