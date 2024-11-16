@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
                   {link.name}
                 </a>
               ))}
-              <a>
+              <a href='#contact'>
               <button
                 className="w-full px-3 py-2 bg-gradient-to-r from-blue-700 to-blue-500  text-white rounded-lg hover:bg-blue-700 transition-colors"
                 onClick={() => setIsOpen(false)}
