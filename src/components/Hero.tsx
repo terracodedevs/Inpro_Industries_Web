@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
           Welcome to Inpro Industries
-          <span className="block text-2xl md:text-3xl mt-2 text-blue-300">
+          <span className="block text-2xl md:text-3xl mt-2 bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">
             Where Passion Meets Precision in Printing
           </span>
         </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
           <a href='#services'>
-          <button className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
+          <button className="px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-500  text-white rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
             Explore Services
           </button>
           </a>

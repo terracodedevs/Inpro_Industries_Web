@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
     <section className="py-20 bg-slate-50" id="why-choose-us">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose Inpro Industries?</h2>
+          <h2 className="text-4xl font-bold text-center mb-1 bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">Why Choose Inpro Industries?</h2>
           <p className="text-lg text-slate-600">
             We combine cutting-edge technology with decades of expertise to deliver outstanding printing solutions.
           </p>

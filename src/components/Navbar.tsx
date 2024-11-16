@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-white shadow-lg ' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <button
               className={`px-6 py-2 rounded-full ${
                 scrolled
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  ? 'bg-gradient-to-r from-blue-700 to-blue-500  text-white hover:bg-blue-700'
                   : 'bg-white text-slate-900 hover:bg-blue-50'
               } transition-colors`}
             >
@@ -86,12 +86,14 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
                   {link.name}
                 </a>
               ))}
+              <a href='#contact'>
               <button
-                className="w-full px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full px-3 py-2 bg-gradient-to-r from-blue-700 to-blue-500  text-white rounded-lg hover:bg-blue-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Get Quote
+                Contact us
               </button>
+              </a>
             </div>
           </div>
         )}
