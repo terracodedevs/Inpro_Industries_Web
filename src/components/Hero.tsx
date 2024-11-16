@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
           Welcome to Inpro Industries
-          <span className="block text-2xl md:text-3xl mt-2 text-blue-300">
+          <span className="block text-2xl md:text-3xl mt-2 bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">
             Where Passion Meets Precision in Printing
           </span>
         </h1>
