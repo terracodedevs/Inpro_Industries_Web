@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import React, { useRef, useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "emailjs-com";
 
 // Replace these constants with your EmailJS credentials
-const YOUR_SERVICE_ID = 'service_qvu70e2';
-const YOUR_TEMPLATE_ID = 'template_4ysoxgw';
-const YOUR_USER_ID = 'vv70io4ATQTdvlk6o';
+const YOUR_SERVICE_ID = "service_qvu70e2";
+const YOUR_TEMPLATE_ID = "template_4ysoxgw";
+const YOUR_USER_ID = "vv70io4ATQTdvlk6o";
 
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null); // Ref for the form
@@ -21,13 +21,13 @@ const Contact: React.FC = () => {
         YOUR_SERVICE_ID,
         YOUR_TEMPLATE_ID,
         formRef.current!,
-        YOUR_USER_ID
+        YOUR_USER_ID,
       );
-      alert('Message sent successfully!');
+      alert("Message sent successfully!");
       formRef.current?.reset(); // Reset the form after a successful submission
     } catch (error) {
-      console.error('Failed to send email:', error);
-      alert('Failed to send message. Please try again later.');
+      console.error("Failed to send email:", error);
+      alert("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -36,11 +36,9 @@ const Contact: React.FC = () => {
   return (
     <section className="py-20 bg-slate-50" id="contact">
       <div className="container mx-auto px-4">
-
-      <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">
-  Get in Touch
-</h2>
-
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent">
+          Get in Touch
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
@@ -115,7 +113,7 @@ const Contact: React.FC = () => {
                 className="w-full py-3 bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded-lg hover:bg-blue-900 transition-colors"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -124,18 +122,17 @@ const Contact: React.FC = () => {
           <div className="lg:pl-12">
             <div className="space-y-8">
               <div>
-
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-  Contact Information
-</h3>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  Contact Information
+                </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <Phone className="w-6 h-6 text-blue-600 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-slate-900">Phone</p>
+                      <p className="font-medium text-slate-900">Hot Line</p>
                       <p className="text-slate-600">
-                        +94779 402202 / +94717 302202 / +9476 7703531
+                        +94779 402202 / +94717 302202
                       </p>
                     </div>
                   </div>
@@ -153,9 +150,9 @@ const Contact: React.FC = () => {
                     <div>
                       <p className="font-medium text-slate-900">Address</p>
                       <p className="text-slate-600">
-                        19<sup>th</sup> Lane, Mewella Road,
+                        No.568, Biyagama Road,
                         <br />
-                        Pethiyagoda, Kelaniya
+                        Singharamulla, Kelaniya
                       </p>
                     </div>
                   </div>

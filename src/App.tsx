@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
@@ -48,7 +43,7 @@ function App() {
               <div className="space-y-2">
                 <p className="flex items-center gap-2">
                   <Phone size={16} />
-                  <span>+94779 402202 / +94717 302202 / +9476 7703531</span>
+                  <span>+94779 402202 / +94717 302202</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail size={16} />
@@ -56,9 +51,7 @@ function App() {
                 </p>
                 <p className="flex items-center gap-2">
                   <MapPin size={16} />
-                  <p>
-                    19<sup>th</sup> Lane, Mewella Road,Pethiyagoda, Kelaniya
-                  </p>
+                  <p>No.568, Biyagama Road, Singharamulla, Kelaniya</p>
                 </p>
               </div>
             </div>
